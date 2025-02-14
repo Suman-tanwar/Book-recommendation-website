@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommendation Website</title>
+    <link rel="stylesheet" href="./home.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body  class="bg-gray-300">
+
+      <!-- Navbar -->
+  <nav class="bg-gray-300 shadow-md">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+          <!-- Logo Section -->
+          <div class="flex items-center space-x-2">
+            <img src="./images/logo.png" alt="Website Logo" class="h-16 w-16 object-cover ">
+            <!-- <span class="text-2xl font-bold text-blue-600">BookNest AI</span> -->
+        </div>
+        <div class="hidden md:flex space-x-16 text-base  font-semibold mt-3">
+            <a href="./home.html" class="text-black hover:text-indigo-600">Home</a>
+            <a href="#" class="text-black hover:text-indigo-600">All Books</a>
+            <a href="#" class="text-black hover:text-indigo-600">Login</a>
+            <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded transition duration-300 border border-transparent hover:border-indigo-600 hover:bg-gray-300 hover:text-indigo-600 ">
+                Sign Up
+              </a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <button id="menu-btn" class="text-gray-700 focus:outline-none">
+                ☰
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-300 font-semibold">
+        <a href="./home.html" class="block px-4 py-2 text-gray-700 hover:text-indigo-600">Home</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:text-indigo-600">All Books</a>
+        <a href="#" class="block px-4 py-2 text-gray-700 hover:text-indigo-600">Login</a>
+        <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded transition duration-300 hover:bg-gray-300 hover:text-indigo-600">
+            Sign Up
+          </a>
+    </div>
+</nav>
+
+<section class="container mx-auto mt-3 bg-gray-350 py-20 px-10 md:flex md:items-center md:justify-between shadow-xl rounded-lg">
+  <div class="max-w-2xl">
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">
+      Unlock the World of Books – <br />Tailored to Your Taste!
+    </h1>
+    <h6 class="text-gray-800 w-80 mb-4">
+      Discover handpicked book recommendations tailored to your interests. Let AI guide you to your perfect read!
+    </h6>
+    <button class="text-lg font-semibold bg-blue-600 text-white px-6 py-3 rounded transition duration-300 ml-auto border border-transparent hover:border-indigo-600 hover:bg-gray-300 hover:text-indigo-600">
+      Get Recommendations
+    </button>
+  </div>
+  <div class="mt-8 md:mt-0">
+    <div class="w-140 h-130 bg-gray-300 flex items-center justify-center text-gray-500">
+      <img src="./images/sectionImg.png" alt="image" />
+    </div>
+  </div>
+</section>
+
+
+  <!-- search bar -->
+  <div class="flex justify-center mt-8 px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center border border-gray-300 rounded-full px-4 py-2 bg-white shadow-md w-full max-w-3xl">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-950" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1111.546 3.032l3.712 3.711a1 1 0 01-1.414 1.415l-3.711-3.712A6 6 0 012 8z" clip-rule="evenodd" />
+      </svg>
+      <input type="text" placeholder="Search books by title, author & keyword..." class="ml-3 w-full bg-transparent focus:outline-none text-gray-950 placeholder-gray-500">
+    </div>
+  </div>
+  
+  <!-- Recent Release Books section -->
+  <section class="container mx-auto px-4 py-8 bg-gray-300 mt-8 shadow-xl rounded-lg overflow-hidden relative">
+    <h2 class="text-2xl font-semibold text-black mb-4">Recent Release / Popular Books</h2>
+  
+    <div class="relative w-full overflow-hidden">
+      <div
+        id="booksScroller"
+        class="flex space-x-4 w-max"
+      >
+        <!-- Book Cards will be dynamically added here via JavaScript -->
+      </div>
+    </div>
+  </section>
+  
+  <!-- footer section -->
+  <footer class="w-full text-black py-10 mt-12 border-t border-gray-700">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+      <!-- Left Section - Navigation Links -->
+      <div class="flex flex-col space-y-3 text-base font-semibold">
+        <a href="./home.html" class="text-black hover:underline hover:text-indigo-600">Home</a>
+        <a href="#" class="text-black hover:underline hover:text-indigo-600">All Books</a>
+        <a href="#" class="text-black hover:underline hover:text-indigo-600">Contact</a>
+      </div>
+  
+      <!-- Middle Section - Contact Info -->
+      <div class="flex flex-col space-y-3 text-black text-lg">
+        <h6><span class="font-semibold text-indigo-700 text-base">Location:</span> Jodhpur, India</h6>
+        <h6><span class="font-semibold text-indigo-700 text-base">Email:</span> contact@bookrecommendation.com</h6>
+        <h6><span class="font-semibold text-indigo-700 text-base">Phone:</span> +123 456 7890</h6>
+      </div>
+  
+     <!-- Right Section - AI GIF Icon -->
+<div class="flex flex-col items-center space-y-2">
+  <div class="bg-indigo-500 p-3 rounded-full shadow-lg hover:scale-110 transition-transform duration-300">
+    <!-- GIF Instead of SVG -->
+    <img src="./images/ai-unscreen.gif" alt="AI Animation" class="h-12 w-12 object-cover rounded-full" />
+  </div>
+  <h6 class="text-base font-bold text-black">AI Recommendation</h6>
+</div>
+  </footer> 
+  <footer>
+    <!-- Bottom Copyright -->
+    <div class="border-t border-gray-700 py-4 text-center text-black text-base font-medium w-full">
+      <h6>&copy; 2025 Book Recommendation Platform. <br> All rights reserved.</h6>
+    </div>
+  </footer>
+  
+  
+
+<script src="home.js"></script>
+</body>
+</html>
